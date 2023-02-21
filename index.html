@@ -1,4 +1,4 @@
-<!-- Base code nav, top made by Lisa Vartia -->
+<!-- Base code nav, top, index.html made by Lisa Vartia -->
 <!DOCTYPE html>
 <html lang="da">
 
@@ -9,6 +9,11 @@
     <title>Køge Handel - Blegdammens p-plads</title>
     <link rel="stylesheet" href="./styles/nav.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -26,7 +31,7 @@
                     <img src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1676985168/K%C3%B8ge%20handel/home-pin_vftiwz.svg"
                         alt="Home button">
                     <div id="current-page"></div>
-                    </a>
+                </a>
             </div>
             <div class="icon"><a href="/pages/parking.html"><img
                         src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1676986621/K%C3%B8ge%20handel/P_mn4zm8.svg"
@@ -42,12 +47,61 @@
             </div>
         </div>
     </nav>
-<!-- Base stop -->
-<!-- Write underneath here for the context of page -->
+    <!-- Base stop -->
+    <!-- Write underneath here for the context of page -->
+    <header>
+        <h1>Velkommen til <br>
+            Blegdammens parkeringsplads <br>
+            (ved NETTO)</h1>
+        <div class="p-img">
+            <img src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1676996865/K%C3%B8ge%20handel/Screenshot_2023-02-21_at_17.27.34_yloc06.png"
+                alt="">
+        </div>
+        <p id="time"></p> <!-- Time from javascript-->
+        <p id="date"></p><!-- Date -->
+    </header>
+    <section>
+        <div class="container">
+            <h2>Parkeringsregler:</h2>
+            <ul>
+                <li>Gratis parkering <br> 1h - 22 pladser udenfor Netto</li>
+                <li>Betal parkering <br> 10 kr /h - parkeringspladsen længere væk, mod vejen</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="buttons">
+        <h3>Find de forskellige forretninger i dit område</h3>
+        <button>Ruter</button>
+
+        <div class="ins-btn">
+            <h3>Vil du se mere af, hvad Køge har at byde på? <br>
+            Tag et kig</h3>
+        <img src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1677001030/K%C3%B8ge%20handel/arrow_unfzcy.svg" alt="">
+        </div> 
+        <button>Inspiration</button>
+    </section>
+
 
 
 
     <script>
+        const options = {
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: false,
+            timeZone: 'Europe/Copenhagen'
+        };
+
+        const date = new Date();
+        const danishTime = date.toLocaleString('da-DK', options);
+        const danishDate = date.toLocaleDateString('da-DK', { day: 'numeric', month: 'long', year: 'numeric' });
+
+        document.getElementById('time').textContent = `Tid: ${danishTime}`;
+        document.getElementById('date').textContent = `Dato: ${danishDate}`;
+
+
     </script>
 </body>
 

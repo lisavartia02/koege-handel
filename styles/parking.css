@@ -1,0 +1,63 @@
+h1 {
+    margin: 50px 18px;
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+button {
+    border: none;    
+    padding: 15px 10px 15px 20px;
+    border-radius: 8px;
+    width: 347px;
+    
+    /* Might need changing */
+}
+.not-active {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    text-align: start;
+    
+}
+
+.color-icon {
+    width: 35px;
+    height: 25px;
+    border-radius: 6px;
+    left: 0;
+   
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* needs to activate */
+.info { 
+    text-align: start;
+    padding: 15px 0;
+    display: none;
+}
+
+.arrow-down {
+    position: absolute;
+    right: 0;
+    display: block;
+}
+
+.arrow-up {
+    position: absolute;
+    right: 0;
+    display: none;
+}

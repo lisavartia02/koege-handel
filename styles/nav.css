@@ -15,6 +15,38 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h3 {
+    font-size: 26px;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+p, li {
+    font-size: 20px;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+ul {
+    padding: 0;
+    white-space: pre-wrap;
 }
 
 /* Mobile top with the logo */
@@ -23,6 +55,7 @@ body {
     height: 70px;
     background-color: var(--white);
     border-bottom: 2px solid var(--dark-grey);
+    z-index: 2;
 }
 
 .logo img {
@@ -37,10 +70,11 @@ body {
 nav {
     width: 100vw;
     height: 80px;
-    background-color: var(--light-grey);
+    background-color: #F5F5F5; 
     position: fixed;
     left: 0;
     bottom: 0;
+    z-index: 2;
    
 }
 
@@ -68,7 +102,7 @@ nav .icon img {
 }
 
 #current-page {
-    background-color: var(--brand-color-teal);
+    background-color: #4F878F;
     width: 50px;
     height: 4px;
     border-radius: 8px;
