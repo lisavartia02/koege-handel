@@ -1,0 +1,18 @@
+/* Everything in nav.css and style.css made by Lisa Vartia */
+
+/* Color variables */
+:root {
+    --brand-color-teal:#4F878F;
+    --dark-grey:#333333;
+    --medium-grey:#AAAAAA;
+    --light-grey:#F5F5F5; 
+    --white:#ffff;
+    --black:#0000; 
+}
+
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

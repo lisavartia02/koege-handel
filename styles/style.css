@@ -1,0 +1,20 @@
+/* Mobile top with the logo */
+.mobiletop{
+    width: 100vw;
+    height: 70px;
+    background-color: var(--white);
+    border-bottom: 2px solid var(--dark-grey);
+}
+
+.logo img {
+    width: 250px; 
+    padding: 13px 0 6px 18px; 
+    position: relative;
+}
+/* ------------ */
+
+/* Bottom navigation with the 4 different tabs */
+
+nav {
+    
+}
