@@ -2,113 +2,126 @@
 
 /* Color variables */
 :root {
-    --brand-color-teal:#4F878F;
-    --dark-grey:#333333;
-    --medium-grey:#AAAAAA;
-    --light-grey:#F5F5F5; 
-    --white:#ffff;
-    --black:#0000; 
+  --brand-color-teal: #4f878f;
+  --dark-grey: #333333;
+  --medium-grey: #aaaaaa;
+  --light-grey: #f5f5f5;
+  --white: #ffff;
+  --black: #0000;
 }
 
 /* Reset */
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 h1 {
-    font-size: 40px;
-    font-weight: 600;
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 h2 {
-    font-size: 36px;
-    font-weight: 600;
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 h3 {
-    font-size: 26px;
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+  font-size: 26px;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-p, li {
-    font-size: 20px;
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+p,
+li {
+  font-size: 20px;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 ul {
-    padding: 0;
+  padding: 0;
 }
 
 /* Mobile top with the logo */
-.mobiletop{
-    width: 100vw;
-    height: 70px;
-    background-color: var(--white);
-    border-bottom: 2px solid var(--dark-grey);
-    z-index: 2;
+.mobiletop {
+  width: 100vw;
+  height: 70px;
+  background-color: var(--white);
+  border-bottom: 2px solid var(--dark-grey);
+  z-index: 2;
 }
 
 .logo img {
-    width: 250px; 
-    padding: 13px 0 6px 18px; 
-    position: relative;
+  width: 250px;
+  padding: 13px 0 6px 18px;
+  position: relative;
 }
 /* ------------ */
 
 /* Bottom navigation with the 4 different tabs */
 
 nav {
-    width: 100vw;
-    height: 80px;
-    background-color: var(--light-grey); 
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    z-index: 2;
-   
+  width: 100vw;
+  height: 80px;
+  background-color: var(--light-grey);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
 }
 
 nav .icon-bar {
-    width: 375px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row; 
-    list-style-type: none;   
+  width: 100vw;
+  max-width: 768px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  list-style-type: none;
 }
 
 nav .icon {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    margin-top: 10px;
-    display: flex;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin-top: 10px;
+  display: flex;
 }
 
 nav .icon img {
-    width: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #current-page {
-    background-color: var(--brand-color-teal);
-    width: 50px;
-    height: 4px;
-    border-radius: 8px;
-    margin-top: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: var(--brand-color-teal);
+  width: 50px;
+  height: 4px;
+  border-radius: 8px;
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ------------ */
+
+/* back arrow for inspiration pages */
+.back-arrow {
+    width: 40px;
+    margin: 20px;
+}
+
+.back-arrow-l {
+    display: block;
+    width: 80px;
+    height: 60px;
+}
