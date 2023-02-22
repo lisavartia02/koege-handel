@@ -363,6 +363,13 @@
 
 
     <script>
+
+if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+    }, false);
+}
+
         //variables for the different classes, btn for the whole. 
         //info that needs to show and the arrows that either needs to show or be hidden.
         const buttons = document.querySelectorAll(".button");
@@ -387,11 +394,7 @@
             });
         });
 
-        if ('addEventListener' in document) {
-    document.addEventListener('DOMContentLoaded', function() {
-        FastClick.attach(document.body);
-    }, false);
-}
+       
     </script>
     <script type='application/javascript' src='/path/to/fastclick.js'></script>
 </body>
