@@ -131,6 +131,7 @@ color: #000000;
     justify-content: center;
     align-items: center;
     color: #ffffff;
+    margin-bottom: 50px;
 }
 
 .first, .second, .third, .forth {
