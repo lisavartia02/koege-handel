@@ -14,6 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
         rel="stylesheet">
+        <script type='application/javascript' src='/path/to/fastclick.js'></script>
 </head>
 
 <body>
@@ -233,14 +234,14 @@
                         <h3>3651111</h3>
                     </div>
                     <p>Carlsensvej<br>(Køge kommune)</p>
-                </div>   
-                  <!-- 5 -->
+                </div>
+                <!-- 5 -->
                 <div class="nr-box">
                     <div class="nr">
                         <h3>461001</h3>
                     </div>
                     <p>E.ON - Torvet 1<br>(E.ON Danmark A/S)</p>
-                </div>     
+                </div>
                 <div class="nr-box">
                     <div class="nr">
                         <h3>3651124</h3>
@@ -360,15 +361,13 @@
             target="_blank">Link til kort over parkeringspladser (PDF)</a>
     </section>
 
-
-    <script type='application/javascript' src='/path/to/fastclick.js'></script>
     <script>
 
-if ('addEventListener' in document) {
-    document.addEventListener('DOMContentLoaded', function() {
-        FastClick.attach(document.body);
-    }, false);
-}
+        if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function () {
+                FastClick.attach(document.body);
+            }, false);
+        }
 
         //variables for the different classes, btn for the whole. 
         //info that needs to show and the arrows that either needs to show or be hidden.
@@ -381,7 +380,7 @@ if ('addEventListener' in document) {
             const arrowDown = button.querySelector(".arrow-down");
             const arrowUp = button.querySelector(".arrow-up");
             // Eventlistener on click, adds a if, else functions for the different conditions if info and arrows are displayed or not. Changes the css style.
-        button.addEventListener("click", function () {
+            button.addEventListener("click", function () {
                 if (info.style.display === "none") {
                     info.style.display = "block";
                     arrowUp.style.display = "block";
@@ -394,9 +393,9 @@ if ('addEventListener' in document) {
             });
         });
 
-       
+
     </script>
-   
+
 </body>
 
 </html>
