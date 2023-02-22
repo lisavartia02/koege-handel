@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="../styles/parking.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
         rel="stylesheet">
-        <script type='application/javascript' src='/path/to/fastclick.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
 <body>
@@ -362,13 +361,6 @@
     </section>
 
     <script>
-
-        if ('addEventListener' in document) {
-            document.addEventListener('DOMContentLoaded', function () {
-                FastClick.attach(document.body);
-            }, false);
-        }
-
         //variables for the different classes, btn for the whole. 
         //info that needs to show and the arrows that either needs to show or be hidden.
         const buttons = document.querySelectorAll(".button");
@@ -380,7 +372,7 @@
             const arrowDown = button.querySelector(".arrow-down");
             const arrowUp = button.querySelector(".arrow-up");
             // Eventlistener on click, adds a if, else functions for the different conditions if info and arrows are displayed or not. Changes the css style.
-            button.addEventListener("click", function () {
+            button.addEventListener("touchstart", function () {
                 if (info.style.display === "none") {
                     info.style.display = "block";
                     arrowUp.style.display = "block";
