@@ -374,7 +374,7 @@
             const arrowDown = button.querySelector(".arrow-down");
             const arrowUp = button.querySelector(".arrow-up");
             // Eventlistener on click, adds a if, else functions for the different conditions if info and arrows are displayed or not. Changes the css style.
-            button.addEventListener("click", function () {
+        button.addEventListener("click", function () {
                 if (info.style.display === "none") {
                     info.style.display = "block";
                     arrowUp.style.display = "block";
@@ -387,11 +387,13 @@
             });
         });
 
-
-
-
-
+        if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+    }, false);
+}
     </script>
+    <script type='application/javascript' src='/path/to/fastclick.js'></script>
 </body>
 
 </html>

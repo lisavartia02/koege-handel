@@ -61,10 +61,14 @@ p {
     height: 30px;
     padding: 0 13px 4px;
     background-color: #1A5159;
-    color: #ffffff;
+    
     border-radius: 6px;
     width: 100px;
     text-align: center;
+}
+
+.nr h3 {
+    color: #ffffff;
 }
 
 
