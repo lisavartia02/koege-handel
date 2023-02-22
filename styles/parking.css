@@ -2,6 +2,10 @@ h1 {
     margin: 50px 18px;
 }
 
+h3 {
+    color: #333333;
+}
+
 
 section {
     display: flex;
