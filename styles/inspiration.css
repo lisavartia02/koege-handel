@@ -114,7 +114,7 @@ color: #000000;
     justify-content: space-around;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 220px;
 }
 .flexbox-1{
     display: flex;
@@ -131,7 +131,6 @@ color: #000000;
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    margin-bottom: 50px;
 }
 
 .first, .second, .third, .forth {

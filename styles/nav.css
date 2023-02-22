@@ -16,7 +16,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif;
-  color: var(--black);
+  color: #333333;
 }
 
 h1 {
@@ -24,6 +24,8 @@ h1 {
   font-weight: 600;
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
+  color: #333333;
+
 }
 
 h2 {
@@ -31,12 +33,16 @@ h2 {
   font-weight: 600;
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
+  color: #333333;
+
 }
 
 h3 {
   font-size: 26px;
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
+  color: #333333;
+
 }
 
 p,
@@ -44,10 +50,14 @@ li {
   font-size: 20px;
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
+  color: #333333;
+
 }
 
 ul {
   padding: 0;
+  color: #333333;
+
 }
 
 /* Mobile top with the logo */
