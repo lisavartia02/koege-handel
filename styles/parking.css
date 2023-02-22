@@ -9,12 +9,13 @@ section {
     align-items: center;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 100px;
 }
 
 
 button {
     border: none;    
-    padding: 15px 10px 15px 20px;
+    padding: 15px 8px 15px 15px;
     border-radius: 8px;
     width: 347px;
     
@@ -60,4 +61,19 @@ p {
     position: absolute;
     right: 0;
     display: none;
+}
+
+li {
+    width: 290px;
+    position: relative;
+    margin-left: 20px;
+}
+
+.map {
+    width: 350px;
+}
+
+.map-section a{
+ color: black;
+    margin-bottom: 60px;
 }
