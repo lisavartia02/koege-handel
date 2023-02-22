@@ -19,8 +19,7 @@ button {
     border-radius: 8px;
     width: 100%;
     min-width: 320px;
-    max-width: 400px;
-    
+    max-width: 400px;   
     /* Might need changing */
 }
 .not-active {
@@ -45,6 +44,25 @@ button {
 p {
     margin-bottom: 10px;
 }
+
+/* areacodes */
+.nr-box {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.nr {
+    height: 30px;
+    padding: 0 13px 4px;
+    background-color: #1A5159;
+    color: #ffffff;
+    border-radius: 6px;
+    width: 100px;
+    text-align: center;
+}
+
 
 /* needs to activate */
 .info { 
