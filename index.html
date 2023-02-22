@@ -93,11 +93,10 @@
     </a>
 </div>
     </section>
-
-
-
-
     <script>
+
+        // How the time is suppose format when called
+        // Hour and minutes in numbers instead of a string of text, 24h, time zone Copenhagen. 
         const options = {
             hour: 'numeric',
             minute: 'numeric',
@@ -105,13 +104,17 @@
             timeZone: 'Europe/Copenhagen'
         };
 
+        // Makes a new time and date object
+        // Makes 3 variables.
+        // Get the current date and time.
         const date = new Date();
+        //Makes a local string with the right formatting. The da-DK is the local code, danish in Denmark, and the options from earlier. 
         const danishTime = date.toLocaleString('da-DK', options);
+        //The same as the time. 'long' means its spelled out in full.
         const danishDate = date.toLocaleDateString('da-DK', { day: 'numeric', month: 'long', year: 'numeric' });
-
+        //Then it takes the html with the ids, and the textContent sets whats suppose to be inside. It creates a sting and uses a template literal to put in the variable of the time/date.
         document.getElementById('time').textContent = `Tid: ${danishTime}`;
         document.getElementById('date').textContent = `Dato: ${danishDate}`;
-
 
     </script>
 </body>

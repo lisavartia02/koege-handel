@@ -360,17 +360,21 @@
     </section>
 
     <script>
-        //variables for the different classes, btn for the whole. 
-        //info that needs to show and the arrows that either needs to show or be hidden.
+      
+        //takes all of the instances with class button and stores in variable
         const buttons = document.querySelectorAll(".button");
 
 
-        // Loops through all of the instantses with these variables, to add a event listener on all of them
+        // Loops through all of the instanses in the buttons array with these variables, to add a event listener on all of them.
+        // For each of the elements make it a variable as well
+        //info that needs to shown and the arrows that either needs to show or be hidden.
         buttons.forEach(function (button) {
             const info = button.querySelector(".info");
             const arrowDown = button.querySelector(".arrow-down");
             const arrowUp = button.querySelector(".arrow-up");
+
             // Eventlistener on click, adds a if, else functions for the different conditions if info and arrows are displayed or not. Changes the css style.
+            //if info has display:none then change the others, otherwise change info back as well as the rest to their start state.
             button.addEventListener("click", function () {
                 if (info.style.display === "none") {
                     info.style.display = "block";
