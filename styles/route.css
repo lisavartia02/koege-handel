@@ -1,0 +1,55 @@
+header {
+    margin: 50px 20px;
+    text-align: center;
+    
+}
+
+.carousel .maps {
+    height: 300px;
+    width: 335px;
+    min-width: 300px;
+    max-width: 425px;
+    margin: 20px;
+    border: 1px solid #333333;
+}
+
+.info {
+    margin: 0 20px 100px 20px ;
+}
+
+.info li {
+    margin: 0 0 15px 20px;
+    
+}
+
+.carousel {
+   margin-bottom: 40px; 
+}
+
+.carousel .map-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.map-btn {
+    gap: 7px;
+}
+
+.carousel button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    flex-direction: row;
+    border: 1px solid black;
+    border-radius: 2px;
+    
+}
+.carousel button img{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: none;
+ }

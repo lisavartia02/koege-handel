@@ -1,4 +1,4 @@
-<!-- Base code nav, top made by Lisa Vartia -->
+<!-- Base template code nav, top and index.html -->
 <!DOCTYPE html>
 <html lang="da">
 
@@ -6,32 +6,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Køge Handel - Blegdammens p-plads</title>
+    <title>Køge Handel - Route</title>
     <link rel="stylesheet" href="../styles/nav.css">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/route.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet">
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body>
     <div class="mobiletop">
         <div class="logo"><a href="../index.html">
-            <img src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1676982758/K%C3%B8ge%20handel/k%C3%B8ge_handel-logo_gtd8n8.png"
-                alt="Køge Handel">
-        </a>
-            
+                <img src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1676982758/K%C3%B8ge%20handel/k%C3%B8ge_handel-logo_gtd8n8.png"
+                    alt="Køge Handel">
+            </a>
+
         </div>
 
     </div>
     <nav>
         <div class="icon-bar">
-            <div  class="icon">
+            <div class="icon">
                 <a href="/index.html">
                     <img src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1676985168/K%C3%B8ge%20handel/home-pin_vftiwz.svg"
                         alt="Home button">
-                   
-                    </a>
+
+                </a>
             </div>
             <div class="icon"><a href="/pages/parking.html"><img
                         src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1676986621/K%C3%B8ge%20handel/P_mn4zm8.svg"
@@ -40,7 +44,8 @@
             <div class="icon"><a href="/pages/route.html"><img
                         src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1676985168/K%C3%B8ge%20handel/route_v8bf57.svg"
                         alt="Route">
-                        <div id="current-page"></div></a>
+                    <div id="current-page"></div>
+                </a>
             </div>
             <div class="icon"><a href="/pages/inspiration.html"><img
                         src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1676992692/K%C3%B8ge%20handel/shopping_bag_bgxmu4.svg"
@@ -48,12 +53,62 @@
             </div>
         </div>
     </nav>
-<!-- Base stop -->
-<!-- Write underneath here for the context of page -->
+    <!-- Base stop -->
+    <!-- Write underneath here for the context of page -->
+    <header>
+        <h1>Router</h1>
+        <h2>Til de forskellige butikker i området</h2>
+    </header>
+
+    <section>
+        <!-- Carousel -->
+        <div x-data="carousel()" class="carousel">
+            <img :src="images[selected]" class="maps" alt="maps">
+            <div class="map-btn">
+                <button @click="if (selected > 0 ) {selected -= 1} else { selected = images.length - 1 }">
+                <img src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1677160331/K%C3%B8ge%20handel/left-a_w6ytpa.svg" alt="">
+                </button>
+            <button @click="if (selected < images.length - 1  ) {selected += 1} else { selected = 0 }"><img src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1677160331/K%C3%B8ge%20handel/right-a_rwm6sl.svg" alt=""></button>
+            </div>
+        </div>
 
 
+        <div class="info">
+            <h3>Butikker i nerhæden:</h3>
+            <ul>
+                <li>Åstrædes Ostehus<br>
+                    Adresse: Torvet 13, 4600 Køge
+                    Afstand: 200m (3min)</li>
+
+                <li>Vitrinen og vitrinens Købmandshandel<br>
+                    Adresse: Vestebrogade 6A, 4600 Køge
+                    Afstand: 250m (4min)
+                </li>
+
+                <li>Sandwich Cafee<br>
+                    Adresse: Brogade 19, 4600 Køge
+                    Afstand: 250m (4min)</li>
+
+                <li>Øl Kædere<br>
+                    Adresse: Brogade 19 (i gården), 4600 Køge
+                    Afstand: 250m (4min)</li>
+            </ul>
+        </div>
+
+    </section>
 
     <script>
+        const carousel = () => {
+            return {
+                selected: 0,
+                images: [
+                "https://res.cloudinary.com/ddqar8r8f/image/upload/v1677153980/K%C3%B8ge%20handel/map-netto_wyflxj.png",
+                "https://res.cloudinary.com/ddqar8r8f/image/upload/v1677157406/K%C3%B8ge%20handel/ost_tlvs5g.png",
+                "https://res.cloudinary.com/ddqar8r8f/image/upload/v1677159593/K%C3%B8ge%20handel/sandwish_vncmhn.png", 
+                "https://res.cloudinary.com/ddqar8r8f/image/upload/v1677159601/K%C3%B8ge%20handel/beer_h1nh4u.png"
+                ]
+            };
+        };
     </script>
 </body>
 
