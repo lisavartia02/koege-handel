@@ -17,10 +17,7 @@ button {
     border: none;    
     padding: 15px 8px 15px 15px;
     border-radius: 8px;
-    width: 100%;
-    min-width: 320px;
-    max-width: 400px;   
-    /* Might need changing */
+    width: 100%; 
 }
 .not-active {
     display: flex;
@@ -37,6 +34,30 @@ button {
     color: #333333;
 }
 
+@media only screen and (max-width: 365px) {
+    .not-active h3 {
+        width: 300px;
+        font-size: 24px;
+    }
+    button {
+        width: 320px;
+        margin: 0 10px;
+    }
+  }
+
+  @media only screen and (min-width: 370px) {
+    button {
+        width: 345px;
+        margin: 0 10px;
+    }
+  }
+
+@media only screen and (min-width: 425px) {
+    .not-active h3 {
+        width: 300px;
+    }
+  }
+
 .color-icon {
     width: 35px;
     height: 25px;
@@ -47,6 +68,7 @@ button {
 
 p {
     margin-bottom: 10px;
+    width: 180px;
 }
 
 /* areacodes */

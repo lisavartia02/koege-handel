@@ -64,11 +64,24 @@
         <!-- Carousel -->
         <div x-data="carousel()" class="carousel">
             <img :src="images[selected]" class="maps" alt="maps">
-            <div class="map-btn">
-                <button @click="if (selected > 0 ) {selected -= 1} else { selected = images.length - 1 }">
-                <img src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1677160331/K%C3%B8ge%20handel/left-a_w6ytpa.svg" alt="">
+           
+
+            <div class="map-btns">
+                <button class="map-btn" @click="if (selected > 0 ) {selected -= 1} else { selected = images.length - 1 }">
+                    <img src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1677160331/K%C3%B8ge%20handel/left-a_w6ytpa.svg"
+                        alt="">
                 </button>
-            <button @click="if (selected < images.length - 1  ) {selected += 1} else { selected = 0 }"><img src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1677160331/K%C3%B8ge%20handel/right-a_rwm6sl.svg" alt=""></button>
+                 <div class="tiny-btns">
+                <template x-for="(image,index) in images" :key="index">
+                  <button class="btn-under"
+                    @click="selected = index"
+                    :style="{ backgroundColor: selected == index ? '#f5f5f5' : '#4a5568' }"
+                  ></button>
+                </template>
+              </div>
+                <button class="map-btn" @click="if (selected < images.length - 1  ) {selected += 1} else { selected = 0 }"><img
+                        src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1677160331/K%C3%B8ge%20handel/right-a_rwm6sl.svg"
+                        alt=""></button>
             </div>
         </div>
 
@@ -77,20 +90,20 @@
             <h3>Butikker i nerhæden:</h3>
             <ul>
                 <li>Åstrædes Ostehus<br>
-                    Adresse: Torvet 13, 4600 Køge
+                    Adresse: Torvet 13, 4600 Køge <br>
                     Afstand: 200m (3min)</li>
 
                 <li>Vitrinen og vitrinens Købmandshandel<br>
-                    Adresse: Vestebrogade 6A, 4600 Køge
+                    Adresse: Vestebrogade 6A, 4600 Køge <br>
                     Afstand: 250m (4min)
                 </li>
 
                 <li>Sandwich Cafee<br>
-                    Adresse: Brogade 19, 4600 Køge
+                    Adresse: Brogade 19, 4600 Køge <br>
                     Afstand: 250m (4min)</li>
 
                 <li>Øl Kædere<br>
-                    Adresse: Brogade 19 (i gården), 4600 Køge
+                    Adresse: Brogade 19 (i gården), 4600 Køge <br>
                     Afstand: 250m (4min)</li>
             </ul>
         </div>
@@ -102,10 +115,10 @@
             return {
                 selected: 0,
                 images: [
-                "https://res.cloudinary.com/ddqar8r8f/image/upload/v1677153980/K%C3%B8ge%20handel/map-netto_wyflxj.png",
-                "https://res.cloudinary.com/ddqar8r8f/image/upload/v1677157406/K%C3%B8ge%20handel/ost_tlvs5g.png",
-                "https://res.cloudinary.com/ddqar8r8f/image/upload/v1677159593/K%C3%B8ge%20handel/sandwish_vncmhn.png", 
-                "https://res.cloudinary.com/ddqar8r8f/image/upload/v1677159601/K%C3%B8ge%20handel/beer_h1nh4u.png"
+                    "https://res.cloudinary.com/ddqar8r8f/image/upload/v1677153980/K%C3%B8ge%20handel/map-netto_wyflxj.png",
+                    "https://res.cloudinary.com/ddqar8r8f/image/upload/v1677157406/K%C3%B8ge%20handel/ost_tlvs5g.png",
+                    "https://res.cloudinary.com/ddqar8r8f/image/upload/v1677159593/K%C3%B8ge%20handel/sandwish_vncmhn.png",
+                    "https://res.cloudinary.com/ddqar8r8f/image/upload/v1677159601/K%C3%B8ge%20handel/beer_h1nh4u.png"
                 ]
             };
         };

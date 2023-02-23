@@ -4,14 +4,18 @@ header {
     
 }
 
+section {
+    margin-bottom: 180px;
+}
+
 .carousel .maps {
     height: 300px;
-    width: 335px;
-    min-width: 300px;
-    max-width: 425px;
+    width: 100%;
     margin: 5px 20px;
     border: 1px solid #333333;
+  
 }
+
 
 .info {
     margin: 0 20px 100px 20px ;
@@ -23,33 +27,85 @@ header {
 }
 
 .carousel {
-   margin-bottom: 40px; 
+   margin-bottom: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
 }
+
+.tiny-btns {
+    display: flex;
+    align-items: center;
+   
+}
+
+.carousel .btn-under {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin: 5px;
+    border: 1px solid #333333;
+    padding: 0;
+}
+
+.carousel .map-btns {
+    display: flex;
+    justify-content: center; 
+    gap: 40px;
+}
+
 
 .carousel .map-btn {
-    display: flex;
-    justify-content: center;
-}
-
-.map-btn {
-    gap: 7px;
-}
-
-.carousel button {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 40px;
-    width: 40px;
+    width: 89px;
     flex-direction: row;
     border: 1px solid black;
-    border-radius: 2px;
+    border-radius: 3px;
+    background-color: #f5f5f5;
     
 }
-.carousel button img{
+.carousel .map-btn img{
     position: absolute;
     height: 20px;
     width: 20px;
     border: none;
  }
+
+
+@media only screen and (min-width: 320px) {
+    .carousel .maps {
+        width: 310px;
+    }
+    .carousel .map-btns {
+        gap: 30px;
+    }
+    .carousel .map-btn {
+        width: 60px;
+    }
+  }
+  
+  @media only screen and (min-width: 375px) {
+    .carousel .maps {
+        width: 335px;
+    }
+    .carousel .map-btns {
+        gap: 40px;
+    }
+    .carousel .map-btn {
+        width: 89px;
+    }
+  }
+  
+  @media only screen and (min-width: 425px) {
+    .carousel .maps {
+        width: 365px;
+    }
+    .carousel .map-btns {
+        gap: 54px;
+    }
+  }
