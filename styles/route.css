@@ -62,7 +62,7 @@ section {
     justify-content: center;
     align-items: center;
     height: 40px;
-    width: 89px;
+    width: 88px;
     flex-direction: row;
     border: 1px solid black;
     border-radius: 3px;
@@ -97,7 +97,7 @@ section {
         gap: 40px;
     }
     .carousel .map-btn {
-        width: 89px;
+        width: 88px;
     }
   }
   
