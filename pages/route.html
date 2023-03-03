@@ -64,8 +64,7 @@
         <!-- Carousel -->
         <div x-data="carousel()" class="carousel">
             <img :src="images[selected]" class="maps" alt="maps">
-           
-
+        
             <div class="map-btns">
                 <button class="map-btn" @click="if (selected > 0 ) {selected -= 1} else { selected = images.length - 1 }">
                     <img src="https://res.cloudinary.com/ddqar8r8f/image/upload/v1677160331/K%C3%B8ge%20handel/left-a_w6ytpa.svg"
